@@ -1,1 +1,25 @@
-<app-main-page></app-main-page>
+<header class="d-flex justify-content-center">
+    <div class="container d-flex justify-content-center">
+        <a routerLink="" class="row col-2 d-flex justify-content-center">
+            <img src="../../assets/img/common/logo.svg" alt=""> 
+        </a>
+        <form class="row col-8 align-items-center search">
+            <input type="text" name="search" class="search-input" placeholder="Поиск">
+            <div class="search-buttons d-flex align-items-center justify-content-between">
+                <a class="btn-filter" href="#">
+                    <img src="../../assets/img/common/filter.svg" alt="">
+                </a>
+                <button class="btn-search">
+                    <img src="../../assets/img/common/search.svg" alt="">
+                </button>
+            </div>
+        </form>
+        <div class="col-2">
+            <a class="login" routerLink="login">Войти</a>
+        </div>
+    </div>      
+</header>
+<main class="d-flex justify-content-center">
+    <router-outlet></router-outlet>    
+</main>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http"
 import { observable, Observable } from 'rxjs';
+import { BookService } from '../servies/book.service';
 
 @Component({
   selector: 'app-main-page',
@@ -9,15 +10,16 @@ import { observable, Observable } from 'rxjs';
 })
 export class MainPageComponent implements OnInit {
 
-  baseUrl = 'localhost:8080'
+  books = {}
 
-  books = {};
-
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.http.get(this.baseUrl + "/")
-      .subscribe(res => this.books = res);
+    this.books = this.bookService.books
+    // this.http.get(this.baseUrl)
+    //   .subscribe(res => this.books = res);
   }
 
 }

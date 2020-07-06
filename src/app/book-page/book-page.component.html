@@ -1,0 +1,42 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <img class="book-img" src="{{book.img}}" alt="">
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="row book-information">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 book-head book-title">{{book.name}}</div>
+                        <div class="col-6 book-head book-rating"><span>{{book.rating}}</span></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 book-key">Автор</div>
+                        <div class="col-6 book-value">{{book.author}}</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 book-key">Дата</div>
+                        <div class="col-6 book-value">{{book.date}}</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 book-key">Жанр</div>
+                        <div class="col-6 book-value">{{book.genre}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row book-description">
+        <div class="col-12">
+            <p class="book-description__title">Описание</p>
+            <p class="book-description__content">{{book.description}}</p>
+        </div>
+    </div> 
+  </div>
